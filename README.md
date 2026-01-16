@@ -1,14 +1,20 @@
 # Docker-documentation
 
 ### Verify installation:
-```docker --version```
-```docker compose version```
+```bash
+docker --version
+```
+
+```bash
+docker compose version
+```
 
 
 ## Dockerfile:
 
 
-```FROM node:18-alpine
+```bash
+FROM node:18-alpine
 
 WORKDIR /app
 
@@ -24,50 +30,74 @@ CMD ["npm", "start"]
 
 ## Building the Image:
 
-```docker build -t <app-name> .```
+```bash
+docker build -t <app-name> .
+```
 
 
 ##  Running the Application:
 
-```docker run -p 3000:3000 <app-name>```
+```bash
+docker run -p 3000:3000 <app-name>
+```
 
 
 ##  Enter a running container:
 
-```docker exec -it container_name sh```
+```bash
+docker exec -it container_name sh
+```
 
 ## Pulling Images:
 
-```docker pull nginx```
+```bash
+docker pull nginx
+```
 
 
 ## Pull a specific tag:
-```docker pull node:18-alpine```
+```bash
+docker pull node:18-alpine
+```
 
 ## List local images:
 
-```docker images```
+```bash
+docker images
+```
 
 ## agging Images:
 
-```docker push <username>/<app-name>:1.0.0```
+```bash
+docker push <username>/<app-name>:1.0.0
+```
 
 ## Running Containers:
 
-```docker run <app-name>```
+```bash
+docker run <app-name>
+```
 
 ## Run with environment variables:
 
-```docker run -e NODE_ENV=production <app-name>```
+```bash
+docker run -e NODE_ENV=production <app-name>
+```
 
 ## Stopping Container:
 
-```docker stop <container_id>```
+```bash
+docker stop <container_id>
+```
 
 ## Remove a container:
 
-```docker rm container_id```
+```bash 
+docker rm container_id
+```
 
 ## Removing Images:
 
-```docker rmi <image_id>```
+```bash
+docker rmi <image_id>
+```
